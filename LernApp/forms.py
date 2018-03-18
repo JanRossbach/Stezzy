@@ -15,5 +15,7 @@ class LernModelForm(forms.ModelForm):
 
 
 class ProjectForm(forms.ModelForm):
-    model = Project
-    fields = {'name', }
+    
+    class Meta():
+        model = Project
+        fields = ('name', 'color',)

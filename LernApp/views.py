@@ -32,7 +32,7 @@ class LernKarteCreate(CreateView):
 
 class ProjectCreateView(CreateView):
     model = Project
-    fields = ['name', ]
+    fields = ['name', 'color',]
 
 
 class LernKarteDetail(DetailView):
