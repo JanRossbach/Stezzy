@@ -1,0 +1,7 @@
+{% extends "LernApp/base.html" %}
+{% load staticfiles%}
+{% block body_block %}
+  <h1>{{ project.name }}</h1>
+  <a class="btn btn-secondary is_right" href="{% url 'update' pk=project.pk %}">Edit</a>
+  <a class="btn btn-secondary is_right" href="{% url 'delete' pk=project.pk %}">delete</a>
+{% endblock %}

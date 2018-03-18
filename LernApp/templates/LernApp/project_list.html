@@ -4,7 +4,7 @@
   <div class="jumbotron">
     {% for project in project_list %}
         <div class="project">
-            <h1><a href="{% url 'lernkarten' pk=project.pk %}">{{ project.name }}</a></h1>
+            <h1><a href="{% url 'lernkarten' pk=project.pk %}" style="color: {{ project.color }}">{{ project.name }}</a></h1>
         </div>
     {% endfor %}
     <a class="btn btn-secondary btn-lg" href="{% url 'new_project'%}" role="button">Neues Projekt</a>

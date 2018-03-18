@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from colorfield.fields import ColorField
 # Create your models here.
 
 
@@ -28,9 +29,10 @@ class LernKarte(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=50)
+    color = ColorField(default='#FF0000')
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('index')
+        return reverse('projects')

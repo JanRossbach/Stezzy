@@ -1,8 +1,9 @@
 {% extends "LernApp/base.html" %}
 {% block body_block %}
 <div class="centerstage">
+    <p>{{project.lernkarte.name}}</p>
     {% for lernkarte in lernkarte_list %}
-      {{ project.name }} 
+
     {% endfor %}
     <a class="btn btn-secondary btn-lg createbutton" href="{% url 'create'%}" role="button">Neue Karte</a>
 </div>
