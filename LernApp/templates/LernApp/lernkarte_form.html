@@ -1,0 +1,10 @@
+{% extends "LernApp/base.html" %}
+{% load staticfiles%}
+{% block body_block %}
+  <h1>Neue LernKarte</h1>
+  <form class="lernkarte-form" method="post">
+    {% csrf_token %}
+    {% include 'LernApp/lernkarte_form_template.html' %}
+    <button type="submit" class='save btn btn-default'>Confirm</button>
+  </form>
+{% endblock %}

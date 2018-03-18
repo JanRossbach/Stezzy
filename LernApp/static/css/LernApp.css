@@ -1,0 +1,10 @@
+body {
+   font-family: 'Ubuntu', sans-serif;
+}
+.container {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.is_right {
+  float: right;
+}

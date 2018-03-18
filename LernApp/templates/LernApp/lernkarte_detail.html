@@ -1,0 +1,9 @@
+{% extends "LernApp/base.html" %}
+{% load staticfiles%}
+{% block body_block %}
+  <h1>{{ lernkarte.name }}</h1>
+  <h3>{{ lernkarte.tag }}</h3>
+  <p>{{ lernkarte.text }}</p>
+  <a class="btn btn-secondary is_right" href="{% url 'update' pk=lernkarte.pk %}">Edit</a>
+  <a class="btn btn-secondary is_right" href="{% url 'delete' pk=lernkarte.pk %}">delete</a>
+{% endblock %}
